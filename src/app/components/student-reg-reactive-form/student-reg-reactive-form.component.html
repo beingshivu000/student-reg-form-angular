@@ -1,0 +1,116 @@
+<section class="h-100 bg-dark w-100">
+    <div class="container h-100 w-100">
+        <div class="row d-flex justify-content-center align-items-center h-100  w-100">
+            <div class="col-lg-8">
+                <div class="card card-registration my-4 w-100">
+                    <div class="row g-0 d-flex justify-content-center align-items-center w-100">
+                        <div class="col-lg-10 d-done ">
+                            <img src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=600" alt="simple photo" class="img-fluid"
+                            style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;">
+                        </div>
+                        <div class="col-md-8 ">
+                            <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+                                <h3  class="mb-5 text-uppercase" > Student Registration Form  </h3>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <label class="form-label">First Name :</label>
+                                            <input type="text" formControlName="firstName"   class="form-control" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <label class="form-label">Middle Name : :</label>
+                                            <input type="text" class="form-control" formControlName="middleName"  >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <label class="form-label">Last Name : </label>
+                                            <input type="text" class="form-control" formControlName="lastName"  >
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                        
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-outline" >
+                                            <label class="form-label">Full Name : </label>
+                                            <input type="text" class="form-control" formControlName="fullName" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <br> 
+                        
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <label class="form-label">select DOB :</label>
+                                            <input type="date" class="form-control" formControlName="dob"  >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <label class="form-label">Age :</label>
+                                            <input type="text" class="form-control" formControlName="age" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-outline" [ngClass]="this.studentForm.controls['licenceNo'].errors?.['required']? 'text-denger':''">
+                                            <label class="form-label">Licence No :</label>
+                                            <input type="text" class="form-control" formControlName="licenceNo"  >
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                        
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Select Country :</label>
+                                        <select class="select"  formControlName="country" class="form-control">
+                                            <option value="">Select Country</option>
+                                            <option value="USA">USA</option>
+                                            <option value="India">India</option>
+                                            <option value="Shirlanka">Shirlanka</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-outline">
+                                            <label class="form-label">Provide State : </label>
+                                            <input type="text" class="form-control" formControlName="state"  >
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                        
+                                <div class="row" *ngIf="this.studentForm.controls['country'].value=== 'India'">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Identity Proof : </label>
+                                        <select class="select"  formControlName="identityType" class="form-control" >
+                                            <option value="">Select Identity Proof</option>
+                                            <option value="Aadhar Card">Aadhar Card</option>
+                                            <option value="Pan Card">Pan Card</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-outline">
+                                            <label class="form-label">Enter Card No : </label>
+                                            <input type="text" class="form-control" formControlName="cardNo">
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">
+                                <!-- [disabled]="studentForm.invalid" -->
+                                Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

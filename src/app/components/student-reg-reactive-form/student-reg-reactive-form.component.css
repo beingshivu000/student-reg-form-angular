@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+/* 
+body{
+    tex
+} */
+
+
+.card-registration {
+    background-color: #fff; /* Change background color */
+    border-radius: 15px; /* Add border radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    padding: 20px; /* Add padding */
+    width: 100%;
+}
+
+.form-label {
+    font-weight: bold; /* Make labels bold */
+}
+
+.form-control {
+    border-radius: 8px; /* Add border radius to input fields */
+    border: 1px solid #ccc; /* Add border */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 0 0.1rem rgba(0,123,255,.25); /* Add focus shadow */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Change button color */
+    border-color: #007bff; /* Change button border color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Change button color on hover */
+    border-color: #0056b3; /* Change button border color on hover */
+}
+
+.row {
+    margin-bottom: 15px; /* Add margin between rows */
+}
+
+/* Center the form */
+.card-registration {
+    max-width: 600px; /* Set maximum width */
+    margin: 0 auto; /* Center horizontally */
+}
