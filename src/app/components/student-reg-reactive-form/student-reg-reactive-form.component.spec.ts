@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+  import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StudentRegReactiveFormComponent } from './student-reg-reactive-form.component';
 

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-student-reg-reactive-form',
   templateUrl: './student-reg-reactive-form.component.html',
@@ -23,22 +24,22 @@ export class StudentRegReactiveFormComponent implements OnInit,AfterViewInit {
   })
 
   ngOnInit(): void {
-      this.studentForm.controls['firstName'].valueChanges.subscribe(_res=>{
+      this.studentForm.controls['firstName'].valueChanges.subscribe((_res: any)=>{
         // debugger;
         this.createFullName();
       })
-      this.studentForm.controls['middleName'].valueChanges.subscribe(_res=>{
+      this.studentForm.controls['middleName'].valueChanges.subscribe((_res: any)=>{
         // debugger;
         this.createFullName();
       })
-      this.studentForm.controls['lastName'].valueChanges.subscribe(_res=>{
+      this.studentForm.controls['lastName'].valueChanges.subscribe((_res: any)=>{
         // debugger;
         this.createFullName();
       })
   }
 
   ngAfterViewInit(): void {
-      this.studentForm.controls['dob'].valueChanges.subscribe(res=>{
+      this.studentForm.controls['dob'].valueChanges.subscribe((res: string | number | Date)=>{
         // debugger;
         const selectDob=new Date(res);
         const dobYear= selectDob.getFullYear();
@@ -53,7 +54,7 @@ export class StudentRegReactiveFormComponent implements OnInit,AfterViewInit {
         }
       })
 
-      this.studentForm.controls['country'].valueChanges.subscribe(res=>{
+      this.studentForm.controls['country'].valueChanges.subscribe((res: string)=>{
         if(res==='India'){
           this.studentForm.controls['state'].setValidators(Validators.required);
         }else{
@@ -61,7 +62,7 @@ export class StudentRegReactiveFormComponent implements OnInit,AfterViewInit {
         }
       })
 
-      this.studentForm.controls['identityType'].valueChanges.subscribe(res=>{
+      this.studentForm.controls['identityType'].valueChanges.subscribe((res: string)=>{
         if(res==='Aadhar Card'){
           this.studentForm.controls['cardNo'].setValidators(Validators.pattern('^[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}$'));
         }else{
