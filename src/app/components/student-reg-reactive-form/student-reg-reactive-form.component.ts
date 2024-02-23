@@ -69,21 +69,21 @@ export class StudentRegReactiveFormComponent implements OnInit,AfterViewInit {
         }
       })
   }
- 
-//   createFullName() {
-//     const firstName = this.studentForm.controls['firstName'].value;
-//     const middleName = this.studentForm.controls['middleName'].value;
-//     const lastName = this.studentForm.controls['lastName'].value;
-    
-//     console.log("First Name:", firstName);
-//     console.log("Middle Name:", middleName);
-//     console.log("Last Name:", lastName);
-    
-//     const fullName = firstName + ' ' + middleName + ' ' + lastName;
-//     console.log("Full Name:", fullName);
-    
-//     this.studentForm.get('fullName')?.setValue(fullName);
-// }
+      
+      //   createFullName() {
+      //     const firstName = this.studentForm.controls['firstName'].value;
+      //     const middleName = this.studentForm.controls['middleName'].value;
+      //     const lastName = this.studentForm.controls['lastName'].value;
+          
+      //     console.log("First Name:", firstName);
+      //     console.log("Middle Name:", middleName);
+      //     console.log("Last Name:", lastName);
+          
+      //     const fullName = firstName + ' ' + middleName + ' ' + lastName;
+      //     console.log("Full Name:", fullName);
+          
+      //     this.studentForm.get('fullName')?.setValue(fullName);
+      // }
 
   createFullName() {
     const firstName = this.studentForm.controls['firstName'].value;
